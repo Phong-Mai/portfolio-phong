@@ -7,17 +7,18 @@ import emailjs from '@emailjs/browser';
 export async function POST(req, res) {
   const { email, subject, message } = await req.json();
   console.log(email, subject, message);
-  const emailContent = `
-      Thông tin : 
-        Subject: ${subject}
-        Mail: ${email}
-        Nội dung: ${message}
-    `;
+
+    const template = {
+      from_name : email,
+      to_name: "Phong",
+      from_email: email,
+      message,
+    }
     try {
       const response = await emailjs.send(
         'service_e66oqvm',
         'template_4oiej0a',
-        { message: emailContent },
+        template,
         '3RMZUbgcrSsiw0Fuk'
       );
       return NextResponse.json(response);
