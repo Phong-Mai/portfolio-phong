@@ -9,8 +9,8 @@ export async function POST(req, res) {
   console.log(email, subject, message);
   const emailContent = `
       Thông tin : 
-        Subject: ${from.subject}
-        Mail: ${from.email}
+        Subject: ${subject}
+        Mail: ${email}
         Nội dung: ${message}
     `;
     try {
