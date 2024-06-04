@@ -4,37 +4,45 @@ import GithubIcon from "../../../public/github-icon.svg";
 import LinkedinIcon from "../../../public/linkedin-icon.svg";
 import Link from "next/link";
 import Image from "next/image";
-
+import emailjs from '@emailjs/browser';
 const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     const data = {
-      email: e.target.email.value,
+      from_email: e.target.email.value,
       subject: e.target.subject.value,
       message: e.target.message.value,
     };
-   
-    const JSONdata = JSON.stringify(data);
-    const endpoint = "/api/send";
-
-    // Form the request for sending data to the server.
-    const options = {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
+    emailjs.init({
+      publicKey: '3RMZUbgcrSsiw0Fuk',
+      // Do not allow headless browsers
+      blockHeadless: true,
+      blockList: {
+        // Block the suspended emails
+        list: ['phongmhp@gmail.com'],
+        // The variable contains the email address
+        watchVariable: 'userEmail',
       },
-      body: JSONdata,
-    };
-
-    const response = await fetch(endpoint, options);
-    const resData = await response.json();
-    console.log(resData);
-    if (response.status === 200) {
-      console.log("Message sent.");
-      setEmailSubmitted(true);
-    }
+      limitRate: {
+        // Set the limit rate for the application
+        id: 'app',
+        // Allow 1 request per 10s
+        throttle: 10000,
+      },
+    });
+    emailjs.send('service_e66oqvm', 'template_4oiej0a', data).then(
+      (response) => {
+        setEmailSubmitted(true);
+        console.log('SUCCESS!', response.status, response.text);
+      },
+      (error) => {
+        console.log('FAILED...', error);
+      },
+    );
+    
+    
   };
   return (
     <section
