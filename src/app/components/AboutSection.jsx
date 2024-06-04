@@ -8,7 +8,7 @@ const TAB_DATA = [
     title: "Skills",
     id: "skills",
     content: (
-      <ul className="list-disc pl-2">
+      <ul className="list-disc grid grid-cols-2  pl-2">
         <li>JavaScript</li>
         <li>React</li>
         <li>NextJs</li>
@@ -45,7 +45,7 @@ const TAB_DATA = [
 ];
 
 const AboutSection = () => {
-  const [tab, setTab] = useState("experience");
+  const [tab, setTab] = useState("skills");
   const [isPending, startTransition] = useTransition();
 
   const handleTabChange = (id) => {
@@ -68,20 +68,20 @@ const AboutSection = () => {
  đang tìm cách mở rộng kiến ​​thức và kỹ năng của mình.
  Tôi rất vui được làm việc với những người khác để tạo ra những ứng dụng tuyệt vời.
           </p>
-          <div className="flex flex-row justify-start mt-8">
+          <div className="flex gap-5 flex-row justify-start mt-8">
+          <TabButton
+              selectTab={() => handleTabChange("skills")}
+              active={tab === "skills"}
+            >
+              {" "}
+              Kỹ năng{" "}
+            </TabButton>
           <TabButton
               selectTab={() => handleTabChange("experience")}
               active={tab === "experience"}
             >
               {" "}
               Kinh nghiệm{" "}
-            </TabButton>
-            <TabButton
-              selectTab={() => handleTabChange("skills")}
-              active={tab === "skills"}
-            >
-              {" "}
-              Kỹ năng{" "}
             </TabButton>
             <TabButton
               selectTab={() => handleTabChange("education")}

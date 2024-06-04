@@ -59,10 +59,10 @@ const EmailSection = () => {
           Tôi hiện đang tìm kiếm cơ hội mới, hộp thư đến của tôi luôn mở. Cho dù bạn có câu hỏi hay chỉ muốn chào hỏi, tôi sẽ cố gắng hết sức để trả lời bạn!
         </p>
         <div className="socials flex flex-row gap-2">
-          <Link href="https://github.com/Phong-Mai">
+          <Link target='_blank' href="https://github.com/Phong-Mai">
             <Image src={GithubIcon} alt="Github Icon" />
           </Link>
-          <Link href="https://www.linkedin.com/in/hoangphong-mai/">
+          <Link target='_blank' href="https://www.linkedin.com/in/hoangphong-mai/">
             <Image src={LinkedinIcon} alt="Linkedin Icon" />
           </Link>
         </div>
@@ -103,7 +103,7 @@ const EmailSection = () => {
                 id="subject"
                 required
                 className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                placeholder="Just saying hi"
+                placeholder="Subject"
               />
             </div>
             <div className="mb-6">
