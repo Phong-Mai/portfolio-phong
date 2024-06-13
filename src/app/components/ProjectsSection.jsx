@@ -51,7 +51,7 @@ const projectsData = [
     previewUrl: "https://blog-app-728c.onrender.com/",
   },
   {
-    id: 7,
+    id: 6,
     title: "React Clone Di Động Việt Website",
     description: "Website clone di động việt",
     image: "/images/projects/6.png",
@@ -60,7 +60,7 @@ const projectsData = [
     previewUrl: "https://smartphonestore-b5749.firebaseapp.com/",
   },
   {
-    id: 6,
+    id: 7,
     title: "Website truyện chữ",
     description: "Website clone di động việt",
     image: "/images/projects/7.png",
