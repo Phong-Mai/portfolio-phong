@@ -8,7 +8,7 @@ const projectsData = [
   {
     id: 1,
     title: "NextJs + Firebase E-commerce Website",
-    description: "Project 1 description",
+    description: "Website nội thất",
     image: "/images/projects/1.png",
     tag: ["All", "Web"],
     gitUrl: "/",
@@ -17,7 +17,7 @@ const projectsData = [
   {
     id: 2,
     title: "NextJs + Firebase E-commerce Website",
-    description: "Project 2 description",
+    description: "Website bán hàng",
     image: "/images/projects/2.png",
     tag: ["All", "Web"],
     gitUrl: "/",
@@ -26,7 +26,7 @@ const projectsData = [
   {
     id: 3,
     title: "React-Firebase Chat App",
-    description: "Project 3 description",
+    description: "Website chat clone Slack",
     image: "/images/projects/3.png",
     tag: ["All", "Web"],
     gitUrl: "/",
@@ -35,7 +35,7 @@ const projectsData = [
   {
     id: 4,
     title: "React Food Website",
-    description: "Project 4 description",
+    description: "Website đặt thức ăn",
     image: "/images/projects/4.png",
     tag: ["All", "Web"],
     gitUrl: "/",
@@ -53,11 +53,20 @@ const projectsData = [
   {
     id: 6,
     title: "React Clone Di Động Việt Website",
-    description: "Project 5 description",
+    description: "Website clone di động việt",
     image: "/images/projects/6.png",
     tag: ["All", "Web"],
     gitUrl: "/",
     previewUrl: "https://smartphonestore-b5749.firebaseapp.com/",
+  },
+  {
+    id: 6,
+    title: "Website truyện chữ",
+    description: "Website clone di động việt",
+    image: "/images/projects/7.png",
+    tag: ["All", "Web"],
+    gitUrl: "/",
+    previewUrl: "https://story-client-seven.vercel.app/",
   },
 ];
 
