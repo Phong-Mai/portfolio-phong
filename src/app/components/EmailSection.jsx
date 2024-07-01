@@ -58,6 +58,8 @@ const EmailSection = () => {
           {" "}
           Tôi hiện đang tìm kiếm cơ hội mới, hộp thư đến của tôi luôn mở. Cho dù bạn có câu hỏi hay chỉ muốn chào hỏi, tôi sẽ cố gắng hết sức để trả lời bạn!
         </p>
+        <a href="tel:+84979722865" title="số điện thoại" className="text-white">Phone : +84 979722865</a>
+        <p><a href="mailto:phongmhp@gmail.com" title="Email" className="text-white">Email : phongmhp@gmail.com</a></p>
         <div className="socials flex flex-row gap-2">
           <Link target='_blank' href="https://github.com/Phong-Mai">
             <Image src={GithubIcon} alt="Github Icon" />

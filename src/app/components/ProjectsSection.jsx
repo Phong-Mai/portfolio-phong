@@ -33,13 +33,13 @@ const projectsData = [
     previewUrl: "https://chat-app-cba1a.web.app/",
   },
   {
-    id: 4,
-    title: "React Food Website",
-    description: "Website đặt thức ăn",
-    image: "/images/projects/4.png",
+    id: 8,
+    title: "NextJs Food-ordering",
+    description: "Website đặt hàng thức ăn",
+    image: "/images/projects/8.png",
     tag: ["All", "Web"],
     gitUrl: "/",
-    previewUrl: "https://foodweb-b113f.web.app",
+    previewUrl: "https://next-pizza-nu.vercel.app/",
   },
   {
     id: 5,
@@ -67,6 +67,15 @@ const projectsData = [
     tag: ["All", "Web"],
     gitUrl: "/",
     previewUrl: "https://story-client-seven.vercel.app/",
+  },
+  {
+    id: 4,
+    title: "React Food Website",
+    description: "Website đặt thức ăn",
+    image: "/images/projects/4.png",
+    tag: ["All", "Web"],
+    gitUrl: "/",
+    previewUrl: "https://foodweb-b113f.web.app",
   },
 ];
 
