@@ -6,6 +6,12 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 const HeroSection = () => {
+  const downloadPDF = async (url) => {
+    const response = await fetch(url);
+    const blob = await response.blob();
+    const fileURL = URL.createObjectURL(blob);
+    window.open(fileURL, '_blank');
+  };
   return (
     <section className="lg:py-16">
       <div className="grid grid-cols-1 sm:grid-cols-12">
@@ -50,7 +56,7 @@ const HeroSection = () => {
               href="/"
               className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3"
             >
-              <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
+              <span onClick={() => downloadPDF('/file/1.pdf')} className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
                 Download CV
               </span>
             </Link>
